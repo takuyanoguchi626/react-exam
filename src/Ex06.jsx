@@ -2,16 +2,27 @@ import { useState } from "react";
 
 export const Ex06 = () => {
   const [isTrue, setIsTrue] = useState(true);
+  const [hasTrue, setHasTrue] = useState(true);
 
-  const inversion = () => {
-    console.log("1" + isTrue);
-
+  const inversionRadio = () => {
     if (isTrue === true) {
       setIsTrue(false);
     } else {
       setIsTrue(true);
     }
-    console.log("2" + isTrue);
+  };
+
+  const inversionCheckBox = () => {
+    if (hasTrue === true) {
+      setHasTrue(false);
+    } else {
+      setHasTrue(true);
+    }
+  };
+
+  const inversion = () => {
+    inversionRadio();
+    inversionCheckBox();
   };
 
   return (
@@ -20,14 +31,14 @@ export const Ex06 = () => {
       <button disabled={!isTrue}>押せるボタン</button>
       <button disabled={isTrue}>押せないボタン</button>
       <br />
-      <input type="radio" checked={isTrue} />
+      <input type="radio" checked={isTrue} onChange={inversionRadio} />
       チェックされているラジオボタン
-      <input type="radio" checked={!isTrue} />
+      <input type="radio" checked={!isTrue} onChange={inversionRadio} />
       チェックされていないラジオボタン
       <br />
-      <input type="checkbox" checked={isTrue} />
+      <input type="checkbox" checked={hasTrue} onChange={inversionCheckBox} />
       チェックされているチェックボックス
-      <input type="checkbox" checked={!isTrue} />
+      <input type="checkbox" checked={!hasTrue} onChange={inversionCheckBox} />
       チェックされていないチェックボックス
       <br />
       <button onClick={inversion}>反転させる</button>
