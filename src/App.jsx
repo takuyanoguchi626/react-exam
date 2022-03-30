@@ -10,10 +10,12 @@ import { Ex09 } from "./Ex09";
 import { Ex10 } from "./Ex10";
 import { Ex11 } from "./Ex11";
 import { Ex12 } from "./Ex12";
+import { Ex13 } from "./Ex13";
 
 export const App = () => {
   return (
     <div>
+      <Ex13 />
       <Ex12 />
       <Ex11 />
       <Ex10 />
