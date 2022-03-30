@@ -8,10 +8,14 @@ import { Ex07 } from "./Ex07";
 import { Ex08 } from "./Ex08";
 import { Ex09 } from "./Ex09";
 import { Ex10 } from "./Ex10";
+import { Ex11 } from "./Ex11";
+import { Ex12 } from "./Ex12";
 
 export const App = () => {
   return (
     <div>
+      <Ex12 />
+      <Ex11 />
       <Ex10 />
       <Ex09 />
       <Ex08 />
