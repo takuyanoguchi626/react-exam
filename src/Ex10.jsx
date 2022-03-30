@@ -2,15 +2,22 @@ import { useState } from "react";
 
 export const Ex10 = () => {
   const [hobby, setHobby] = useState([]);
+
   const choiceHobby = (e) => {
-    setHobby(() => []);
     setHobby((h) => {
-      h.push(e.target.value);
-      return h;
+      if (e.target.checked === true) {
+        h.push(e.target.value);
+        console.log(h);
+      } else {
+        h = h.filter((h) => h !== e.target.value);
+        console.log(h);
+      }
+
+      return [...h];
     });
-    console.log(hobby);
+    console.log(e.target.checked);
   };
-  const bikeCheck = () => {};
+
   return (
     <div>
       <h1>Ex10</h1>
