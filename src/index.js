@@ -1,9 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { App } from "./App";
+import { AdminFlagProvider } from "./components/providers/AdminFlagProvider";
 import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <AdminFlagProvider>
+    <App />
+  </AdminFlagProvider>,
+  document.getElementById("root")
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
